@@ -1,8 +1,17 @@
+DROP TABLE Person;
+DROP TABLE Instructor;
+DROP TABLE Student;
+DROP TABLE Course;
+DROP TABLE Section;
+DROP TABLE Program;
+DROP TABLE StudentProgram;
+DROP TABLE SectionProgram;
+DROP TABLE Enrollment;
 
 
 #create table Person
 CREATE TABLE Person (
-    PersonID int NOT NULL,
+    PersonID int NOT NULL AUTO_INCREMENT,
     FirstName varchar(255),
     LastName varchar(255),
     type varchar(255),
@@ -24,14 +33,14 @@ CREATE TABLE Student (
 );
 
 CREATE TABLE Course (
-    CourseID int NOT NULL,
+    CourseID int NOT NULL AUTO_INCREMENT,
     CourseName varchar(255),
     Topic varchar(255),
     PRIMARY KEY (CourseID)
 );
 
 CREATE TABLE Section (
-    crs_id int NOT NULL,
+    crs_id int NOT NULL AUTO_INCREMENT,
     InstructorID int NOT NULL,
     cid int NOT NULL,
     days_of_week varchar(255),
@@ -54,7 +63,7 @@ CREATE TABLE Section (
 );
 
 CREATE TABLE Program (
-    ProgramID int NOT NULL,
+    ProgramID int NOT NULL AUTO_INCREMENT,
     ProgramName varchar(255),
     department varchar(255),
     PRIMARY KEY (ProgramID)
