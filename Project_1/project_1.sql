@@ -44,7 +44,7 @@ CREATE TABLE Section (
     InstructorID int NOT NULL,
     cid int NOT NULL,
     days_of_week varchar(255),
-    time_of_day time,
+    time_of_day varchar(255),
     location varchar(255),
     credit_hours int,
     status varchar(255),
